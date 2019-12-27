@@ -17,9 +17,9 @@ if (cookieVal) {
   let cookie = $persistentStore.write(cookieVal, cookieKey)
   if (cookie) {
     let msg = `Cookie [${cookieName}] 写入成功!`
-    let msg1= `Cookie [${cookieVal}] 写入成功!`
     $notification.post(msg, '', '详见日志')
-    $notification.post(msg1, '', '详见日志')
+    $notification.post(cookieVal, '', '详见日志')
+
     console.log(msg)
     console.log(cookieVal)
   }
